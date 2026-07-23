@@ -18,3 +18,36 @@
 mmsegmentation/mmseg/datasets/pr_dataset.py
 practicum_work/src/data/check_dataset.py
 notebook.ipynb
+
+
+## Этап 2. Формирование первичных гипотез
+
+### Стартовая гипотеза 1 
+
+**Описание гипотезы**  
+
+pspnet_r50-d8_512x1024_40k_cityscapes_20200605_003338-2966598c.pth
+
+Опишите логику выбора модели, лосса, гиперпараметров и аугментаций.  
+Можете ссылаться на результаты EDA, публичные результаты моделей и детали реализации архитектур.
+
+
+до обучения
+python tools/test.py ./configs/pspnet_pr/pspnet_py.py pspnet_r50-d8_512x1024_40k_cityscapes_20200605_003338-2966598c.pth --work-dir ./output_example --out ./output_example/raw
+aAcc: 25.5000  mDice: 19.5800  mAcc: 37.1400  data_time: 2.4886  time: 12.2299
+**Результаты обучения**  
+
+ссылка на конфиг  
+ссылка на clearml  
+
+
+**Анализ качества**  
+
+Анализ качества. Приложите метрики, примеры фейлов, примеры правильных ответов модели.  
+
+
+### Стартовая гипотеза 2 
+
+...
+.\configs\_base_\datasets\pr_dataset.py
+.\configs\_base_\schedules\pr_schedule.py

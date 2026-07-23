@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "../../../.."
+		},
+		{
+			"name": "zero-to-mastery-ml",
+			"path": "../../../../zero-to-mastery-ml"
+		},
+		{
+			"name": "CV1",
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"python.experiments.enabled": true
+	}
+}
