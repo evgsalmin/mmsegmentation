@@ -2,7 +2,7 @@
 # Указываем тип датасета, это имя класса, который мы написали. 
 # Так как мы зарегистрировали его с помощью декоратора @DATASETS.register_module()
 # Теперь mmsegmentation может создавать его экземпляры, читая тип из конфига 
-dataset_type = 'PrDataset'
+dataset_type = 'PrDataset2'
 data_root = "./dataset"
 crop_size = (256, 256)
 
