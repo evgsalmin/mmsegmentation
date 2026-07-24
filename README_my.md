@@ -56,7 +56,8 @@ aAcc: 25.5000  mDice: 19.5800  mAcc: 37.1400  data_time: 2.4886  time: 12.2299
 .\configs\pspnet_pr\pspnet_py.py
 ссылка на clearml  - сайт ClearML не открывается
 Best mDice: 81.97 (at iteration 240)
-(practicum_work\supplementary\viz\1st_1gip.png)
+<img src="practicum_work\supplementary\viz\1st_1gip.png" alt="График">
+
 
 ------------------------------
 ## Гипотеза 2: Легковесный Dropout-регуляризатор (Защита от переобучения)
