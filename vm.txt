@@ -1,0 +1,10 @@
+Имя ресурса: r-dle-gpu-t4-7-4-1-1424129
+Данные для подключения к виртуальной машине. IP-адрес -- 103.76.55.190.
+Приватный ключ:
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZWQyNTUx
+OQAAACD6QfUxsTBasRvrkPJNUGG0UJwzq8BCCXZdsrBFwVwPzwAAAIiHoqGkh6KhpAAAAAtzc2gt
+ZWQyNTUxOQAAACD6QfUxsTBasRvrkPJNUGG0UJwzq8BCCXZdsrBFwVwPzwAAAED/EEciat1Lgprw
+SSeCkx8mBpjSKzM11x8HfiWzk1Qhm/pB9TGxMFqxG+uQ8k1QYbRQnDOrwEIJdl2ysEXBXA/PAAAA
+AAECAwQF
+-----END OPENSSH PRIVATE KEY-----
