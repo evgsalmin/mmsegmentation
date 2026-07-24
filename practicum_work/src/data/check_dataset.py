@@ -19,8 +19,8 @@ def load_ds() -> PrDataset:
     # Эти пути понадобятся для иницализации датасета, 
     # Папка с картинками получится объединением (data_root, data_prefix[img_path])
     # А папка с разметкой — объединением (data_root, data_prefix[seg_map_path])
-    data_root = os.path.join(mmseg_root, "dataset")
-    data_prefix=dict(img_path=os.path.join("img", "train"), seg_map_path=os.path.join("labels", "train"))
+    data_root = os.path.join(mmseg_root, "dataset_pt")
+    data_prefix=dict(img_path=os.path.join("img", "val"), seg_map_path=os.path.join("labels", "val"))
 
 
     # Сам датасет отвечает исклчительно за то, чтобы распознать структуру данных и корректно
@@ -48,7 +48,7 @@ def load_ds() -> PrDataset:
 
 def plot_sample_demo(ds):    
     print(f"Загружен датасет длиной {len(ds)} элементов")
-    save_dir = "practicum_work/supplementary/viz/train"
+    save_dir = "practicum_work/supplementary/viz"
     # считываем метаинформацию  
     ds_meta = ds.metainfo
 

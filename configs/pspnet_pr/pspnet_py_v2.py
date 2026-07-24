@@ -1,8 +1,8 @@
 _base_ = [
     '../_base_/models/pspnet_r50-d8.py', 
-    '../_base_/datasets/pr_dataset.py',
+    '../_base_/datasets/pr_dataset_v2.py',
     '../_base_/default_runtime.py', 
-    '../_base_/schedules/pr_schedule.py'
+    '../_base_/schedules/pr_schedule_v2.py'
 ]
 
 class_weight = [0.37, 3.28, 3.92]
@@ -32,6 +32,8 @@ model = dict(
     test_cfg=dict(mode="whole"),
     decode_head=dict(
         num_classes=3,
+        dropout_ratio=0.5,
+        pool_scales=(2, 4, 8, 12), 
         loss_decode=[
             dict(
                 type='CrossEntropyLoss',
@@ -45,6 +47,7 @@ model = dict(
     ),
     auxiliary_head=dict(
         num_classes=3,
+        dropout_ratio=0.5,
         loss_decode=[
             dict(
                 type='CrossEntropyLoss',

@@ -1,20 +1,30 @@
 epoch_num = 300
 
 # Подготовим оптимайзер, используем дефолтные параметры 
-optimizer = dict(type='SGD', lr=0.001, momentum=0.9, weight_decay=0.0005)
+optimizer = dict(type='AdamW', lr=0.0003, weight_decay=0.01)
 # OptimWrapper это обертка над оптимизатором, нужна чтобы стандартные оптимизаторы 
 # и более сложные реализации из mmsegmentation имели один интерфейс совместимый с Runner 
 optim_wrapper = dict(type='OptimWrapper', optimizer=optimizer, clip_grad=None)
 
 # Определяем распорядок LR
 param_scheduler = [
+    # Линейный разогрев на первых 5 эпохах
     dict(
-        type='PolyLR',
-            eta_min=1e-6,
-            power=0.9,
-            begin=0,
-            end=epoch_num,
-            by_epoch=True
+        type='LinearParamScheduler',
+        param_name='lr',    # ДОБАВЛЕНО: явно указываем, что меняем Learning Rate
+        start_factor=1e-6,
+        by_epoch=True,     
+        begin=0,
+        end=5
+    ),
+    # Плавное косинусное затухание с 5 по 300 эпоху
+    dict(
+        type='CosineAnnealingLR',
+        
+        eta_min=1e-6,
+        by_epoch=True,     
+        begin=5,
+        end=epoch_num
     )
 ]
 

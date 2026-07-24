@@ -6,22 +6,51 @@ dataset_type = 'PrDataset'
 data_root = "./dataset"
 crop_size = (256, 256)
 
-# ==== Определяем обучающий пайплайн данных ======
-# Напомним, что датасет исходно отвечает только за то, чтобы распознать структуру данных
-# Все остальные операции мы передаём как пайплайн
-# Здесь у нас минимальный набор для обучения
-# Чтение картинки и разметки и организация их в формате, который подходит для обучения
-# Это базовый пайплайн, при реальном использовании вы можете добавить какие-то этапы 
-# между LoadAnnotations и PackSegInputs
-# ==== Определяем обуающий пайплайн данных ======
+# ==== Обучающий пайплайн с агрессивной регуляризацией (Гипотеза 2) ======
 train_pipeline = [
     dict(type='LoadImageFromFile'),
     dict(type='LoadAnnotations'),
-    # Аугментацции 
-    dict(type='Resize', scale=(256, 256), keep_ratio=True),
+    
+    # 1. Геометрические изменения (масштабирование и кроп)
+    # Диапазон scale_factor от 0.5 до 1.5 позволяет имитировать разное удаление объектов
+    dict(type='RandomResize', scale=(256, 256), ratio_range=(0.5, 1.5), keep_ratio=True),
     dict(type='RandomCrop', crop_size=crop_size, cat_max_ratio=0.75),
-    dict(type='RandomFlip', prob=0.5),
+    dict(type='RandomFlip', prob=0.5, direction='horizontal'),
+    
+    # 2. Искажения цвета (яркость, контраст, насыщенность)
     dict(type='PhotoMetricDistortion'),
+    
+    # 3. Продвинутые аугментации через Albumentations (Разрушение текстур)
+    dict(
+        type='Albu',
+        transforms=[
+            # Случайный выбор между размытием и добавлением гауссова шума
+            dict(
+                type='OneOf',
+                transforms=[
+                    dict(type='Blur', blur_limit=3, p=1.0),
+                    dict(type='GaussNoise', var_limit=(10.0, 50.0), p=1.0),
+                ],
+                p=0.5
+            ),
+            # CutOut / CoarseDropout: затирает случайные квадраты на картинке.
+            # Позволяет модели находить кошек/собак, даже если они частично перекрыты.
+            dict(
+                type='CoarseDropout',
+                max_holes=4,
+                max_height=32,
+                max_width=32,
+                min_holes=1,
+                min_height=16,
+                min_width=16,
+                fill_value=0,          # Затираем нулями (черный цвет на картинке)
+                mask_fill_value=255,   # Игнорируем затертую область в лоссе (seg_pad_val)
+                p=0.5
+            )
+        ]
+    ),
+    
+    # 4. Финальная упаковка тензоров в формат модели
     dict(type='PackSegInputs')
 ]
 
@@ -35,8 +64,9 @@ train_dataset = dict(
     img_suffix=".jpg",
     seg_map_suffix=".png"
 )
+
 train_dataloader = dict(
-    batch_size=16,
+    batch_size=16,             # Размер батча 16 отлично подходит для AdamW
     num_workers=4,
     persistent_workers=True,
     sampler=dict(type='DefaultSampler', shuffle=True),

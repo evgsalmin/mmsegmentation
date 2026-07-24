@@ -548,9 +548,18 @@ def get_palette(dataset):
     return labels
 
 
-def dummy_dataset_classes():
+def pr_dataset_classes():
     return ["background", "cat", "dog"]
 
 
-def dummy_dataset_palette():
+def pr_dataset_palette():
     return [[0, 0, 0], [255, 0, 0], [0, 255, 0]]
+
+def pr_dataset_v2_classes():
+    return ["background", "cat", "dog"]
+
+
+def pr_dataset_v2_palette():
+    return [[0, 0, 0], [255, 0, 0], [0, 255, 0]]
+
+

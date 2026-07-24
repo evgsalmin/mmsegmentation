@@ -41,6 +41,7 @@ from .transforms import (CLAHE, AdjustGamma, Albu, BioMedical3DPad,
                          SegRescale)
 from .voc import PascalVOCDataset
 from .pr_dataset import PrDataset
+from .pr_dataset_v2 import PrDataset2
 
 # yapf: enable
 __all__ = [
