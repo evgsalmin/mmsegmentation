@@ -2,7 +2,7 @@
 # Указываем тип датасета, это имя класса, который мы написали. 
 # Так как мы зарегистрировали его с помощью декоратора @DATASETS.register_module()
 # Теперь mmsegmentation может создавать его экземпляры, читая тип из конфига 
-dataset_type = 'PrDataset2'
+dataset_type = 'PrDataset'
 data_root = "./dataset"
 crop_size = (256, 256)
 
@@ -44,7 +44,7 @@ train_pipeline = [
                 min_height=16,
                 min_width=16,
                 fill_value=0,          # Затираем нулями (черный цвет на картинке)
-                mask_fill_value=255,   # Игнорируем затертую область в лоссе (seg_pad_val)
+                mask_fill_value=0,   # Игнорируем затертую область в лоссе (seg_pad_val)
                 p=0.5
             )
         ]
