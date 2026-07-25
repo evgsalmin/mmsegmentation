@@ -144,14 +144,16 @@ ta/scalars.json | sed 's/"mDice": //; s/,".*step": //' | sort -k1 -n | tail -n 1
 ## Этап 4. Заключение и выбор лучшего эксперимента
 
 
+
 | Столбец 1 | Столбец 2 | Столбец 3 | Столбец 4 |
 | :---: | :---: | :---: | :---: |
-| ![1](practicum_work/supplementary/viz/inf/inf_1st_2gip_1.jpg) | ![2](img2.jpg) | ![3](img3.jpg) | ![4](img4.jpg) |
-| ![5](img5.jpg) | ![6](img6.jpg) | ![7](img7.jpg) | ![8](img8.jpg) |
-| ![9](img9.jpg) | ![10](img10.jpg) | ![11](img11.jpg) | ![12](img12.jpg) |
-| ![13](img13.jpg) | ![14](img14.jpg) | ![15](img15.jpg) | ![16](img16.jpg) |
-| ![17](img17.jpg) | ![18](img18.jpg) | ![19](img19.jpg) | ![20](img20.jpg) |
-| ![21](img21.jpg) | ![22](img22.jpg) | ![23](img23.jpg) | ![24](img24.jpg) |
+| ![gt_1](practicum_work/supplementary/viz/inf/gt_1.jpg) | ![gt_2](practicum_work/supplementary/viz/inf/gt_2.jpg) | ![gt_3](practicum_work/supplementary/viz/inf/gt_3.jpg) | ![gt_4](practicum_work/supplementary/viz/inf/gt_4.jpg) |
+| ![inf_1st_1gip_1](practicum_work/supplementary/viz/inf/inf_1st_1gip_1.jpg) | ![inf_1st_1gip_2](practicum_work/supplementary/viz/inf/inf_1st_1gip_2.jpg) | ![inf_1st_1gip_3](practicum_work/supplementary/viz/inf/inf_1st_1gip_3.jpg) | ![inf_1st_1gip_4](practicum_work/supplementary/viz/inf/inf_1st_1gip_4.jpg) |
+| ![inf_1st_2gip_1](practicum_work/supplementary/viz/inf/inf_1st_2gip_1.jpg) | ![inf_1st_2gip_2](practicum_work/supplementary/viz/inf/inf_1st_2gip_2.jpg) | ![inf_1st_2gip_3](practicum_work/supplementary/viz/inf/inf_1st_2gip_3.jpg) | ![inf_1st_2gip_4](practicum_work/supplementary/viz/inf/inf_1st_2gip_4.jpg) |
+| ![inf_2st_1gip_1](practicum_work/supplementary/viz/inf/inf_2st_1gip_1.jpg) | ![inf_2st_1gip_2](practicum_work/supplementary/viz/inf/inf_2st_1gip_2.jpg) | ![inf_2st_1gip_3](practicum_work/supplementary/viz/inf/inf_2st_1gip_3.jpg) | ![inf_2st_1gip_4](practicum_work/supplementary/viz/inf/inf_2st_1gip_4.jpg) |
+| ![inf_2st_2gip_1](practicum_work/supplementary/viz/inf/inf_2st_2gip_1.jpg) | ![inf_2st_2gip_2](practicum_work/supplementary/viz/inf/inf_2st_2gip_2.jpg) | ![inf_2st_2gip_3](practicum_work/supplementary/viz/inf/inf_2st_2gip_3.jpg) | ![inf_2st_2gip_4](practicum_work/supplementary/viz/inf/inf_2st_2gip_4.jpg) |
+| ![pt_1](practicum_work/supplementary/viz/inf/pt_1.jpg) | ![pt_2](practicum_work/supplementary/viz/inf/pt_2.jpg) | ![pt_3](practicum_work/supplementary/viz/inf/pt_3.jpg) | ![pt_4](practicum_work/supplementary/viz/inf/pt_4.jpg) |
+
 
 
 ### Лучший эксперимент 
