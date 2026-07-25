@@ -56,6 +56,7 @@ aAcc: 25.5000  mDice: 19.5800  mAcc: 37.1400  data_time: 2.4886  time: 12.2299
 .\configs\pspnet_pr\pspnet_py.py
 ссылка на clearml  - сайт ClearML не открывается
 Best mDice: 81.97 (at iteration 240)
+python tools/analysis_tools/analyze_logs.py work_dirs/pspnet_py/20260724_132610/vis_data/20260724_132610.json --keys mDice --out work_dirs/pspnet_py/out.png
 <img src="practicum_work\supplementary\viz\1st_1gip.png" alt="Гипотеза 1, базовый сценарий">
 python tools/test.py configs/pspnet_pr/pspnet_py.py work_dirs/pspnet_py/epoch_240.pth --work-dir work_dirs/pspnet_py --out work_dirs/pspnet_py/raw
 <img src="practicum_work\supplementary\viz\inf\inf_1st_1gip_1.jpg" alt="картинка">
@@ -120,7 +121,10 @@ configs\pspnet_pr\pspnet_py_exp.py
 configs\_base_\datasets\pr_dataset_exp.py
 configs\_base_\schedules\pr_schedule.py
 ссылка на clearml 
-
+grep -o '"mDice": [0-9.]*, .* "step": [0-9]*' work_dirs/pspnet_py_exp/20260725_115042/vis_da
+ta/scalars.json | sed 's/"mDice": //; s/,".*step": //' | sort -k1 -n | tail -n 1
+80.53, "mAcc": 82.77, "data_time": 0.02158421940273709, "time": 0.27111061414082843, "step": 225
+<img src="practicum_work\supplementary\viz\2st_1gip.png" alt="Гипотеза 2, эксперимент">
 **Анализ качества**
 
 Анализ качества. Приложите метрики, примеры фейлов, примеры правильных ответов модели.  
@@ -133,3 +137,5 @@ configs\_base_\schedules\pr_schedule.py
 .\configs\_base_\datasets\pr_dataset_v2.py
 .\configs\_base_\schedules\pr_schedule_v2.py
 .\configs\pspnet_pr\pspnet_py_v2_exp.py
+
+80.53, "mAcc": 82.77, "data_time": 0.02158421940273709, "time": 0.27111061414082843, "step": 225
