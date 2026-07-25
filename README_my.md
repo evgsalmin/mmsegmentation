@@ -145,14 +145,16 @@ ta/scalars.json | sed 's/"mDice": //; s/,".*step": //' | sort -k1 -n | tail -n 1
 
 
 
-| Столбец 1 | Столбец 2 | Столбец 3 | Столбец 4 |
-| :---: | :---: | :---: | :---: |
-| ![gt_1](practicum_work/supplementary/viz/inf/gt_1.jpg) | ![gt_2](practicum_work/supplementary/viz/inf/gt_2.jpg) | ![gt_3](practicum_work/supplementary/viz/inf/gt_3.jpg) | ![gt_4](practicum_work/supplementary/viz/inf/gt_4.jpg) |
-| ![inf_1st_1gip_1](practicum_work/supplementary/viz/inf/inf_1st_1gip_1.jpg) | ![inf_1st_1gip_2](practicum_work/supplementary/viz/inf/inf_1st_1gip_2.jpg) | ![inf_1st_1gip_3](practicum_work/supplementary/viz/inf/inf_1st_1gip_3.jpg) | ![inf_1st_1gip_4](practicum_work/supplementary/viz/inf/inf_1st_1gip_4.jpg) |
-| ![inf_1st_2gip_1](practicum_work/supplementary/viz/inf/inf_1st_2gip_1.jpg) | ![inf_1st_2gip_2](practicum_work/supplementary/viz/inf/inf_1st_2gip_2.jpg) | ![inf_1st_2gip_3](practicum_work/supplementary/viz/inf/inf_1st_2gip_3.jpg) | ![inf_1st_2gip_4](practicum_work/supplementary/viz/inf/inf_1st_2gip_4.jpg) |
-| ![inf_2st_1gip_1](practicum_work/supplementary/viz/inf/inf_2st_1gip_1.jpg) | ![inf_2st_1gip_2](practicum_work/supplementary/viz/inf/inf_2st_1gip_2.jpg) | ![inf_2st_1gip_3](practicum_work/supplementary/viz/inf/inf_2st_1gip_3.jpg) | ![inf_2st_1gip_4](practicum_work/supplementary/viz/inf/inf_2st_1gip_4.jpg) |
-| ![inf_2st_2gip_1](practicum_work/supplementary/viz/inf/inf_2st_2gip_1.jpg) | ![inf_2st_2gip_2](practicum_work/supplementary/viz/inf/inf_2st_2gip_2.jpg) | ![inf_2st_2gip_3](practicum_work/supplementary/viz/inf/inf_2st_2gip_3.jpg) | ![inf_2st_2gip_4](practicum_work/supplementary/viz/inf/inf_2st_2gip_4.jpg) |
-| ![pt_1](practicum_work/supplementary/viz/inf/pt_1.jpg) | ![pt_2](practicum_work/supplementary/viz/inf/pt_2.jpg) | ![pt_3](practicum_work/supplementary/viz/inf/pt_3.jpg) | ![pt_4](practicum_work/supplementary/viz/inf/pt_4.jpg) |
+
+| Столбец 0 | Столбец 1 | Столбец 2 | Столбец 3 | Столбец 4 |
+| :---: | :---: | :---: | :---: | :---: |
+| **gt** | ![gt_1](practicum_work/supplementary/viz/inf/gt_1.jpg) | ![gt_2](practicum_work/supplementary/viz/inf/gt_2.jpg) | ![gt_3](practicum_work/supplementary/viz/inf/gt_3.jpg) | ![gt_4](practicum_work/supplementary/viz/inf/gt_4.jpg) |
+| **pretrained** | ![pt_1](practicum_work/supplementary/viz/inf/pt_1.jpg) | ![pt_2](practicum_work/supplementary/viz/inf/pt_2.jpg) | ![pt_3](practicum_work/supplementary/viz/inf/pt_3.jpg) | ![pt_4](practicum_work/supplementary/viz/inf/pt_4.jpg) |
+| **1 гипотеза** | ![inf_1st_1gip_1](practicum_work/supplementary/viz/inf/inf_1st_1gip_1.jpg) | ![inf_1st_1gip_2](practicum_work/supplementary/viz/inf/inf_1st_1gip_2.jpg) | ![inf_1st_1gip_3](practicum_work/supplementary/viz/inf/inf_1st_1gip_3.jpg) | ![inf_1st_1gip_4](practicum_work/supplementary/viz/inf/inf_1st_1gip_4.jpg) |
+| **2 гипотеза** | ![inf_1st_2gip_1](practicum_work/supplementary/viz/inf/inf_1st_2gip_1.jpg) | ![inf_1st_2gip_2](practicum_work/supplementary/viz/inf/inf_1st_2gip_2.jpg) | ![inf_1st_2gip_3](practicum_work/supplementary/viz/inf/inf_1st_2gip_3.jpg) | ![inf_1st_2gip_4](practicum_work/supplementary/viz/inf/inf_1st_2gip_4.jpg) |
+| **1 гипотеза +эксп** | ![inf_2st_1gip_1](practicum_work/supplementary/viz/inf/inf_2st_1gip_1.jpg) | ![inf_2st_1gip_2](practicum_work/supplementary/viz/inf/inf_2st_1gip_2.jpg) | ![inf_2st_1gip_3](practicum_work/supplementary/viz/inf/inf_2st_1gip_3.jpg) | ![inf_2st_1gip_4](practicum_work/supplementary/viz/inf/inf_2st_1gip_4.jpg) |
+| **2 гипотеза +эксп** | ![inf_2st_2gip_1](practicum_work/supplementary/viz/inf/inf_2st_2gip_1.jpg) | ![inf_2st_2gip_2](practicum_work/supplementary/viz/inf/inf_2st_2gip_2.jpg) | ![inf_2st_2gip_3](practicum_work/supplementary/viz/inf/inf_2st_2gip_3.jpg) | ![inf_2st_2gip_4](practicum_work/supplementary/viz/inf/inf_2st_2gip_4.jpg) |
+
 
 
 
