@@ -58,9 +58,12 @@ aAcc: 25.5000  mDice: 19.5800  mAcc: 37.1400  data_time: 2.4886  time: 12.2299
 Best mDice: 81.97 (at iteration 240)
 <img src="practicum_work\supplementary\viz\1st_1gip.png" alt="Гипотеза 1, базовый сценарий">
 python tools/test.py configs/pspnet_pr/pspnet_py.py work_dirs/pspnet_py/epoch_240.pth --work-dir work_dirs/pspnet_py --out work_dirs/pspnet_py/raw
-
-
+<img src="practicum_work\supplementary\viz\inf\inf_1st_1gip_1.jpg" alt="картинка">
+<img src="practicum_work\supplementary\viz\inf\inf_1st_1gip_2.jpg" alt="картинка">
+<img src="practicum_work\supplementary\viz\inf\inf_1st_1gip_3.jpg" alt="картинка">
+<img src="practicum_work\supplementary\viz\inf\inf_1st_1gip_4.jpg" alt="картинка">
 ------------------------------
+
 ## Гипотеза 2: Легковесный Dropout-регуляризатор (Защита от переобучения)
 Тяжелая модель PSPNet с энкодером ResNet-50 изначально создавалась для огромного датасета Cityscapes. На ваших 190 картинках размером 256x256 она моментально переобучится (меморизирует пиксели). Цель этой гипотезы — агрессивно подавить оверфиттинг за счет сильной регуляризации, аугментаций и деструкции мелких признаков, заставив модель искать общие силуэты кошек и собак.
 ## Основные параметры конфигурации
@@ -90,6 +93,10 @@ aAcc: 25.5000  mDice: 19.5800  mAcc: 37.1400  data_time: 2.4886  time: 12.2299
 Best mDice: 78.43 (at iteration 144)
 <img src="practicum_work\supplementary\viz\1st_2gip.png" alt="Гипотеза 2, базовый сценарий">
 
+<img src="practicum_work\supplementary\viz\inf\inf_1st_2gip_1.jpg" alt="картинка">
+<img src="practicum_work\supplementary\viz\inf\inf_1st_2gip_2.jpg" alt="картинка">
+<img src="practicum_work\supplementary\viz\inf\inf_1st_2gip_3.jpg" alt="картинка">
+<img src="practicum_work\supplementary\viz\inf\inf_1st_2gip_4.jpg" alt="картинка">
 **Анализ качества**  
 
 Анализ качества. Приложите метрики, примеры фейлов, примеры правильных ответов модели.  
