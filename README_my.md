@@ -57,6 +57,7 @@ aAcc: 25.5000  mDice: 19.5800  mAcc: 37.1400  data_time: 2.4886  time: 12.2299
 ссылка на clearml  - сайт ClearML не открывается
 Best mDice: 81.97 (at iteration 240)
 <img src="practicum_work\supplementary\viz\1st_1gip.png" alt="Гипотеза 1, базовый сценарий">
+python tools/test.py configs/pspnet_pr/pspnet_py.py work_dirs/pspnet_py/epoch_240.pth --work-dir work_dirs/pspnet_py --out work_dirs/pspnet_py/raw
 
 
 ------------------------------

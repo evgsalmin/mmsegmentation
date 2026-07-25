@@ -88,7 +88,7 @@ test_dataloader = dict(
     num_workers=4,
     persistent_workers=True,
     sampler=dict(type='DefaultSampler', shuffle=False),
-    dataset=val_dataset
+    dataset=test_dataset
 )
 
 
