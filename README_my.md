@@ -146,7 +146,7 @@ ta/scalars.json | sed 's/"mDice": //; s/,".*step": //' | sort -k1 -n | tail -n 1
 
 | Столбец 1 | Столбец 2 | Столбец 3 | Столбец 4 |
 | :---: | :---: | :---: | :---: |
-| ![1](practicum_work\supplementary\viz\inf\inf_1st_2gip_1.jpg) | ![2](img2.jpg) | ![3](img3.jpg) | ![4](img4.jpg) |
+| ![1](practicum_work/supplementary/viz/inf/inf_1st_2gip_1.jpg) | ![2](img2.jpg) | ![3](img3.jpg) | ![4](img4.jpg) |
 | ![5](img5.jpg) | ![6](img6.jpg) | ![7](img7.jpg) | ![8](img8.jpg) |
 | ![9](img9.jpg) | ![10](img10.jpg) | ![11](img11.jpg) | ![12](img12.jpg) |
 | ![13](img13.jpg) | ![14](img14.jpg) | ![15](img15.jpg) | ![16](img16.jpg) |
