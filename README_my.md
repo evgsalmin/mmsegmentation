@@ -112,28 +112,26 @@
  
 **Результаты обучения**
 
-configs\pspnet_pr\pspnet_py_exp.py
-configs\_base_\datasets\pr_dataset_exp.py
-configs\_base_\schedules\pr_schedule.py
-ссылка на clearml 
-grep -o '"mDice": [0-9.]*, .* "step": [0-9]*' work_dirs/pspnet_py_exp/20260725_115042/vis_da
-ta/scalars.json | sed 's/"mDice": //; s/,".*step": //' | sort -k1 -n | tail -n 1
-80.53, "mAcc": 82.77, "data_time": 0.02158421940273709, "time": 0.27111061414082843, "step": 225
-<img src="practicum_work\supplementary\viz\2st_1gip.png" alt="Гипотеза 2, эксперимент">
-**Анализ качества**
+- configs\pspnet_pr\pspnet_py_exp.py
+- configs\_base_\datasets\pr_dataset_exp.py
+- configs\_base_\schedules\pr_schedule.py
+- Best mDice: 80.53 (at iteration 225)
 
-Анализ качества. Приложите метрики, примеры фейлов, примеры правильных ответов модели.  
+<img src="practicum_work\supplementary\viz\2st_1gip.png" alt="Гипотеза 1, эксперимент">
+  
 
 ### Эксперимент 2 
 * На основе Гипотезы 2
 * Единственное изменение - убрать pool_scales=(2, 4, 8, 12), чтобы проверить его позитивное или негативное влияение
 
 
-.\configs\_base_\datasets\pr_dataset_v2.py
-.\configs\_base_\schedules\pr_schedule_v2.py
-.\configs\pspnet_pr\pspnet_py_v2_exp.py
+- .\configs\_base_\datasets\pr_dataset_v2.py
+- .\configs\_base_\schedules\pr_schedule_v2.py
+- .\configs\pspnet_pr\pspnet_py_v2_exp.py
+- Best mDice: 79.73 (at iteration 213)
 
-80.53, "mAcc": 82.77, "data_time": 0.02158421940273709, "time": 0.27111061414082843, "step": 225
+<img src="practicum_work\supplementary\viz\2st_2gip.png" alt="Гипотеза 1, эксперимент">
+
 
 
 ## Этап 4. Заключение и выбор лучшего эксперимента
