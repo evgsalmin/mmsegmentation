@@ -30,16 +30,14 @@
 
 **Описание гипотезы**  
 
-pspnet_r50-d8_512x1024_40k_cityscapes_20200605_003338-2966598c.pth
-
 Для задачи сегментации (3 класса: фон, кот, собака) на таком маленьком датасете (190 изображений) предобученная модель PSPNet — это хорошая отправная точка, но текущий конфиг требует адаптации.
 Ниже представлены две первичные гипотезы для создания сильного бейзлайна.
+
 ------------------------------
 ## Гипотеза 1: Консервативный бейзлайн (Минимум изменений)
 Используем исходную архитектуру, но адаптируем её под малый размер изображений и данных, чтобы избежать моментального переобучения.
 
-* Модель: pspnet_r50-d8. Архитектуру не меняем, но меняем количество классов в num_classes с 19 на 3. Обязательно загружаем предобученные веса (ImageNet/Cityscapes) для энкодера (ResNet-50).
-
+* Модель: pspnet_r50-d8(pspnet_r50-d8_512x1024_40k_cityscapes_20200605_003338-2966598c.pth). Архитектуру не меняем, но меняем количество классов в num_classes с 19 на 3. Обязательно загружаем предобученные веса (ImageNet/Cityscapes) для энкодера (ResNet-50).
 * Оптимизатор и LR: SGD с импульсом 0.9 и weight_decay=0.0005. Начальный lr=0.001 (уменьшен в 10 раз от дефолтного, так как датасет крошечный). Политика изменения LR: PolyLR.
 * Лосс-функция: CrossEntropy и DiceLoss . Добавляем веса классов class_weight - [0.37, 3.28, 3.92]
 * Длительность обучения: 300 эпох. 
@@ -50,19 +48,18 @@ pspnet_r50-d8_512x1024_40k_cityscapes_20200605_003338-2966598c.pth
     * PhotoMetricDistortion (случайное изменение яркости, контраста, насыщенности)
     * Normalize и Pad
 
-до обучения
+- до обучения mDice: 19.5800 
 
-aAcc: 25.5000  mDice: 19.5800  mAcc: 37.1400  data_time: 2.4886  time: 12.2299
 **Результаты обучения**  
 
-.\configs\_base_\datasets\pr_dataset.py
-.\configs\_base_\schedules\pr_schedule.py
-.\configs\pspnet_pr\pspnet_py.py
-ссылка на clearml  - сайт ClearML не открывается
-Best mDice: 81.97 (at iteration 240)
-python tools/analysis_tools/analyze_logs.py work_dirs/pspnet_py/20260724_132610/vis_data/20260724_132610.json --keys mDice --out work_dirs/pspnet_py/out.png
+- .\configs\_base_\datasets\pr_dataset.py
+- .\configs\_base_\schedules\pr_schedule.py
+- .\configs\pspnet_pr\pspnet_py.py
+- ссылка на clearml  - сайт ClearML не открывается, будем строить график с помощью python tools/analysis_tools/analyze_logs.py work_dirs/pspnet_py/20260724_132610/vis_data/20260724_132610.json --keys mDice --out work_dirs/pspnet_py/out.png
 <img src="practicum_work\supplementary\viz\1st_1gip.png" alt="Гипотеза 1, базовый сценарий">
-python tools/test.py configs/pspnet_pr/pspnet_py.py work_dirs/pspnet_py/epoch_240.pth --work-dir work_dirs/pspnet_py --out work_dirs/pspnet_py/raw
+- Best mDice: 81.97 (at iteration 240)
+- примеры инференса (python tools/test.py configs/pspnet_pr/pspnet_py.py work_dirs/pspnet_py/epoch_240.pth --work-dir work_dirs/pspnet_py --out work_dirs/pspnet_py/raw)
+
 <img src="practicum_work\supplementary\viz\inf\inf_1st_1gip_1.jpg" alt="картинка">
 <img src="practicum_work\supplementary\viz\inf\inf_1st_1gip_2.jpg" alt="картинка">
 <img src="practicum_work\supplementary\viz\inf\inf_1st_1gip_3.jpg" alt="картинка">
