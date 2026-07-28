@@ -7,6 +7,11 @@
 - размеры картинок и масок совпадают
 - в train найдены 5 картинок, где фон составляет > 99.5%, визуальная проверка показала, что картинки не размечены корректно, были удалены (000000028253_7169.png, 000000121530_5761.png,000000247301_4455.png, 000000275919_4499.png, 000000574769_0.png)
 - после визуальной оценки всего train ds - были удалены (из-за некорректнрой разметки) 3 сэмпла (000000023731_404, 000000419618_7033, 000000481212_908)
+| Столбец 0 |
+| :---: | 
+|<img src="practicum_work\supplementary\viz\ds_examples\ds_1.png" alt="картинка">|
+|<img src="practicum_work\supplementary\viz\ds_examples\ds_2.png" alt="картинка">|
+|<img src="practicum_work\supplementary\viz\ds_examples\ds_3.png" alt="картинка">|
 
 ### EDA
 - потенциальных классов (включая фон): 3 (background, cat, dog)
@@ -15,8 +20,8 @@
 
 - создан и визуализирован dataset
 
-mmsegmentation/mmseg/datasets/pr_dataset.py
-practicum_work/src/data/check_dataset.py
+mmsegmentation/mmseg/datasets/pr_dataset.py 
+practicum_work/src/data/check_dataset.py 
 notebook.ipynb
 
 
