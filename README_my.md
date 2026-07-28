@@ -57,7 +57,7 @@
 - .\configs\pspnet_pr\pspnet_py.py
 - ссылка на clearml  - сайт ClearML не открывается, будем строить график с помощью python tools/analysis_tools/analyze_logs.py work_dirs/pspnet_py/20260724_132610/vis_data/20260724_132610.json --keys mDice --out work_dirs/pspnet_py/out.png
 <img src="practicum_work\supplementary\viz\1st_1gip.png" alt="Гипотеза 1, базовый сценарий">
-- Best mDice: 81.97 (at iteration 240)
+- Best mDice: 81.97 (at iteration 240) 
 - примеры инференса (python tools/test.py configs/pspnet_pr/pspnet_py.py work_dirs/pspnet_py/epoch_240.pth --work-dir work_dirs/pspnet_py --out work_dirs/pspnet_py/raw)
 
 <img src="practicum_work\supplementary\viz\inf\inf_1st_1gip_1.jpg" alt="картинка">
