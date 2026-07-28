@@ -136,7 +136,7 @@
 
 ## Этап 4. Заключение и выбор лучшего эксперимента
 
-
+- прмеры правильных и неправильных предсказаний
 
 
 | Столбец 0 | Столбец 1 | Столбец 2 | Столбец 3 | Столбец 4 |
@@ -148,25 +148,18 @@
 | **1 гипотеза +эксп** | ![inf_2st_1gip_1](practicum_work/supplementary/viz/inf/inf_2st_1gip_1.jpg) | ![inf_2st_1gip_2](practicum_work/supplementary/viz/inf/inf_2st_1gip_2.jpg) | ![inf_2st_1gip_3](practicum_work/supplementary/viz/inf/inf_2st_1gip_3.jpg) | ![inf_2st_1gip_4](practicum_work/supplementary/viz/inf/inf_2st_1gip_4.jpg) |
 | **2 гипотеза +эксп** | ![inf_2st_2gip_1](practicum_work/supplementary/viz/inf/inf_2st_2gip_1.jpg) | ![inf_2st_2gip_2](practicum_work/supplementary/viz/inf/inf_2st_2gip_2.jpg) | ![inf_2st_2gip_3](practicum_work/supplementary/viz/inf/inf_2st_2gip_3.jpg) | ![inf_2st_2gip_4](practicum_work/supplementary/viz/inf/inf_2st_2gip_4.jpg) |
 
+- для всех четырех вариантов mDice ~80, явного фаворита нет
+- Гипотеза 1 сходится немного быстрее и стабильней
+
+|  | mDice |
+| :--- | :--- |
+|**1 гипотеза** | 81.97 |
+| **2 гипотеза** | 78.43 |
+| **1 гипотеза +эксп** | 80.53 |
+| **2 гипотеза +эксп** | 79.73 |
 
 
 
-### Лучший эксперимент 
-
-Кратко опишите параметры этого эксперимента и как вы пришли к нему.
-
-**mDice (test subset) = ваше_значение**
 
 
-### Примеры корректных предсказаний (тестовый датасет)
 
-Приложите 3-5 картинок
-
-
-### Примеры ошибок (тестовый датасет)
-
-Приложите 3-5 картинок
-
-### Возможности для улучшения 
-
-Проанализируйте ошибки и предложите, что можно сделать для повышения качества.
