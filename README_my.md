@@ -19,9 +19,9 @@
 
 - создан и визуализирован dataset
 
-mmsegmentation/mmseg/datasets/pr_dataset.py 
-practicum_work/src/data/check_dataset.py 
-notebook.ipynb
+- mmsegmentation/mmseg/datasets/pr_dataset.py 
+- practicum_work/src/data/check_dataset.py 
+- notebook.ipynb
 
 
 ## Этап 2. Формирование первичных гипотез
